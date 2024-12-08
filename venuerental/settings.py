@@ -16,6 +16,8 @@ from os import getenv
 from datetime import timedelta
 from dotenv import load_dotenv
 
+load_dotenv()
+
 from urllib.parse import urlparse
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -129,10 +131,7 @@ WSGI_APPLICATION = 'venuerental.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # Add these at the top of your settings.py
-from os import getenv
 from datetime import timedelta
-from dotenv import load_dotenv
-
 from urllib.parse import urlparse
 
 # Load environment variables from the .env file
