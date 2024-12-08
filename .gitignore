@@ -1,1 +1,69 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Database files
+*.sqlite3
+db.sqlite3
+
+# Django files
+*.log
+*.pot
+*.mo
+*.swp
+
+# Environment variables
 .env
+*.env
+
+# Django static files (generated)
+static/
+
+# Media files (uploads, user files, etc.)
+media/
+
+# PyCharm project files
+.idea/
+
+# VS Code project files
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Coverage reports
+.coverage
+*.cover
+
+# Testing files
+nosetests.xml
+pytest.ini
+coverage.xml
+*.cover
+
+# Build and distribution files
+*.egg
+*.egg-info
+dist/
+build/
+*.tar.gz
+*.zip
+
+# Local configuration
+*.local
+*.conf
+
+# Security and secret files
+*.env
+*.env.*
