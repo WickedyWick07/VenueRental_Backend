@@ -67,3 +67,6 @@ build/
 # Security and secret files
 *.env
 *.env.*
+.env
+
+data.json
