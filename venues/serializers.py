@@ -10,9 +10,12 @@ class VenueImageSerializer(serializers.ModelSerializer):
         fields = ['id', 'image', 'uploaded_at', 'image_url']
 
     def get_image_url(self, obj):
-        if obj.image:
-            return f"{settings.NETLIFY_MEDIA_URL}{obj.image.name.replace('/static/', '')}"
-        return None
+    if obj.image:
+        netlify_url = f"{settings.NETLIFY_MEDIA_URL}{obj.image.name.replace('/static/', '')}"
+        backend_url = f"{settings.BACKEND_MEDIA_URL}{obj.image.name}"
+        # Check if Netlify path exists, fallback to backend URL
+        return netlify_url if is_netlify_path_available(netlify_url) else backend_url
+    return None
 
 
 class BookingSerializer(serializers.ModelSerializer):
