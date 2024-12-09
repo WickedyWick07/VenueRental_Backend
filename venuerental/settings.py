@@ -191,6 +191,15 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS")
-CORS_ALLOW_CREDENTIALS = os.getenv("CORS_ALLOW_CREDENTIALS")
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS")
+CORS_ALLOWED_ORIGINS = [
+    'https://allontoprentals.netlify.app',
+    'http://localhost:8000',
+    'http://localhost:5173',
+]
+CORS_ALLOW_CREDENTIALS = True
+ALLOWED_HOSTS = [
+    'allontoprentals.netlify.app',
+    'venuerental-backend.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
