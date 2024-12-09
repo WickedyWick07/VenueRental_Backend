@@ -27,7 +27,7 @@ db.sqlite3
 static/
 
 # Media files (uploads, user files, etc.)
-media/
+
 
 # PyCharm project files
 .idea/
@@ -69,4 +69,3 @@ build/
 *.env.*
 .env
 
-data.json
