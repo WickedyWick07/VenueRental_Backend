@@ -9,7 +9,10 @@ class VenueImageSerializer(serializers.ModelSerializer):
         model = VenueImage
         fields = ['id', 'image', 'uploaded_at', 'image_url']
 
-   
+    def get_image_url(self, obj):
+        if obj.image:
+            return f"{settings.NETLIFY_MEDIA_URL}{obj.image.name.replace('/static/', '')}"
+        return None
 
 
 class BookingSerializer(serializers.ModelSerializer):
