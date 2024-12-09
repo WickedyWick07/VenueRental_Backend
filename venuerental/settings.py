@@ -48,7 +48,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-MEDIA_URL = 'https://venueimages.netlify.app'
+MEDIA_URL = 'https://venueimages.netlify.app/'
 MEDIA_ROOT = None
 # Application definition
 

@@ -4,9 +4,10 @@ from django.conf import settings
 
 
 class VenueImageSerializer(serializers.ModelSerializer):
+    image_url = serializers.SerializerMethodField()
     class Meta:
         model = VenueImage
-        fields = ['id', 'image', 'uploaded_at']
+        fields = ['id', 'image', 'uploaded_at', 'image_url']
 
     def get_image_url(self, obj):
         if obj.image:
