@@ -1,12 +1,18 @@
 from rest_framework import serializers
 from .models import Venue, VenueImage, Booking
-
+from django.conf import settings
 
 
 class VenueImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = VenueImage
         fields = ['id', 'image', 'uploaded_at']
+
+    def get_image_url(self, obj):
+        if obj.image:
+            return f"{settings.NETLIFY_MEDIA_URL}{obj.image.name.replace('/static/', '')}"
+        return None
+
 
 class BookingSerializer(serializers.ModelSerializer):
     class Meta: 
